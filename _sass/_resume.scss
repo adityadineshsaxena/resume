@@ -1,6 +1,7 @@
 /** custom **/
 .resume-container {
 //  min-width: 740px;
+  padding-bottom: 60px;
 
   h1 {
 //    text-align: center;
@@ -96,7 +97,9 @@
       }
 
       .content {
-        height: 200px;
+        height: 400px;
+        overflow-y: auto;
+        box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3);
       }
     }
 
@@ -104,6 +107,12 @@
       height: 0;
       overflow: hidden;
       transition: height .5s;
+      box-sizing: border-box;
+      padding: 0 20px;
+
+      p {
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -124,4 +133,17 @@
       }
     }
   }
+}
+
+.fixed-message {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 3px 30px;
+  box-sizing: border-box;
+  color: #FFF;
+  background-color: #8FBC8F;
+  font-size: 100%;
+  left: 0;
+  text-align: center;
 }
