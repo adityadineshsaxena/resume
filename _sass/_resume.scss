@@ -1,0 +1,127 @@
+/** custom **/
+.resume-container {
+//  min-width: 740px;
+
+  h1 {
+//    text-align: center;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    > div:first-child {
+//      font-size: 40px;
+      max-width: 40%;
+
+      > div {
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    > div:last-child {
+      text-align: right;
+      font-size: 14px;
+    }
+  }
+}
+
+.profile-nav {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bbb;
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  margin: 10px 0 0;
+
+  li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #DDD;
+    border-radius: 5px;
+    transition: opacity .3s;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 5px 10px;
+  }
+}
+
+.resume-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .resume-list-item {
+    border-bottom: 1px solid #bbb;
+
+    h2 {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 10px;
+      transition: all 0.2s ease-in;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    .item-icon {
+      margin-right: 10px;
+      transition: transform 0.5s;
+      font-size: 30px;
+      transform-origin: 50% 50%;
+      width: 20px;
+      height: 50px;
+      text-align: center;
+    }
+
+    &.active {
+      background-color: #f1f1f1;
+
+      .item-icon {
+        transform: rotate(405deg);
+      }
+
+      .content {
+        height: 200px;
+      }
+    }
+
+    .content {
+      height: 0;
+      overflow: hidden;
+      transition: height .5s;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .resume-container {
+    h1 {
+      flex-direction: column;
+
+      > div:first-child {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      > div:last-child {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
