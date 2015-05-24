@@ -13,8 +13,8 @@
     window.onload = function() {
       var list = document.querySelector('.resume-list');
       for(var i = 0; i < list.children.length; i++) {
-        list.children[i].addEventListener('click', function(e) {
-          console.log(this.classList.toggle('active'));
+        list.children[i].querySelector('h2').addEventListener('click', function(e) {
+          console.log(this.parentNode.classList.toggle('active'));
         });
       }
     };
